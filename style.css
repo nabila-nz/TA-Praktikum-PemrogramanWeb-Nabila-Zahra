@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #fff;
+    color: #2e1a47;
+}
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 8%;
+    box-shadow: 0 2px 10px rgba(139, 92, 246, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+}
+.logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #6d28d9;
+    letter-spacing: 3px;
+}
+.logo span {
+    color: #ec4899; 
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #2e1a47;
+    font-weight: 500;
+    position: relative;
+}
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #8b5cf6;
+    transition: width 0.3s ease;
+}
+nav ul li a:hover::after {
+    width: 100%;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem 10%;
+    background: linear-gradient(135deg, #f9a8d4, #c084fc);
+}
+.hero-text h1 {
+    font-size: 2.6rem;
+    color: #2e1a47;
+}
+.hero-text h1 span {
+    color: #8b5cf6;
+}
+.hero-text p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #4a306d;
+}
+.btn-primary {
+    background-color: #8b5cf6;
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+}
+.hero-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid #ec4899;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(236, 72, 153, 0.3);
+}
+.about {
+    text-align: center;
+    padding: 4rem 15%;
+    background-color: #faf5ff;
+}
+.about h2 {
+    color: #8b5cf6;
+    margin-bottom: 1rem;
+}
+.education {
+    background-color: #f3e8ff;
+    padding: 4rem 10%;
+}
+.education h2 {
+    color: #7e22ce;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+.edu-item {
+    background-color: #ffffff;
+    border: 3px solid #8b5cf6;
+    padding: 1.5rem;
+    box-shadow: 0 5px 10px rgba(139, 92, 246, 0.15);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+.edu-item:hover {
+    transform: translateY(-10px);
+}
+.contact {
+    padding: 4rem 10%;
+    text-align: center;
+}
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 1rem;
+    background: linear-gradient(45deg, #ec4899, #a855f7);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.btn-whatsapp:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+footer {
+    background-color: #ba94e2;
+    text-align: center;
+    padding: 3rem;
+    margin-top: 2rem;
+    color: #2e1a47;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        margin-top: 2rem;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+}
